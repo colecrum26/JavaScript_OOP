@@ -60,3 +60,55 @@ console.log(ross, cole);
 
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
+
+class Calculator {
+    constructor(){
+        this.result = 0;
+    }
+    add(a, b){
+        if (!b){
+            this.result = this.result + a;
+        } else {
+            this.result = a + b;
+        }
+    }
+
+    subtract(a, b){
+        if (!b){
+            this.result = this.result - a;
+        } else {
+            this.result = a - b;
+        }
+    }
+
+    multiply(a, b){
+        if (!b){
+            this.result = this.result * a;
+        } else {
+            this.result = a * b;
+        }
+    }
+
+    divide(a, b){
+        if (!b){
+            this.result = this.result / a;
+        } else {
+            this.result = a / b;
+        }
+    }
+
+    displayResult(){
+        console.log(this.result);
+    }
+
+}
+
+const cal = new Calculator();
+cal.add(2, 2);
+cal.displayResult();
+cal.subtract(2);
+cal.displayResult();
+cal.multiply(4);
+cal.displayResult();
+cal.divide(4);
+cal.displayResult();
